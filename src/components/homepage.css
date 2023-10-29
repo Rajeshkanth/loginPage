@@ -1,0 +1,265 @@
+h1,
+p {
+    cursor: default;
+}
+
+.create-account-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: #F2C192;
+    padding: 7% 10%;
+    box-sizing: border-box;
+}
+
+.left {
+    background-color: #fff;
+
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 3%;
+}
+
+.right {
+    width: 50%;
+
+    box-sizing: border-box;
+    background-image: url("./svg/digital-art-moon-wallpaper.jpg");
+    background-size: cover;
+}
+
+.svg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .1rem auto;
+    height: 10%;
+}
+
+.moonsoon {
+    color: '#0C0D0E';
+    font-size: 8.66px;
+    font-family: 'Nunito';
+    font-weight: 800;
+    /* line-height: 11.55; */
+    letter-spacing: 2.51;
+    word-wrap: 'break-word'
+}
+
+.ca {
+    color: var(--neutral-primary-day, #0C0D0E);
+    font-family: Open Sans;
+    font-size: 23.1px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24.65px;
+    margin-top: 1.5rem;
+}
+
+
+.ca-container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-top: -.5rem;
+}
+
+.byEmail {
+    color: #141415;
+    font-family: Open Sans;
+    font-size: 11.55px;
+    font-style: normal;
+    font-weight: 600;
+    border-bottom: 2px solid black;
+    width: 50%;
+    text-align: center;
+    padding: .4rem 3%;
+    box-sizing: border-box;
+}
+
+.byMail2 {
+    color: #515961;
+    font-family: Open Sans;
+    font-size: 11.55px;
+    font-style: normal;
+    font-weight: 400;
+    width: 50%;
+    text-align: center;
+    padding: .4rem 3%;
+    box-sizing: border-box;
+}
+
+.byPhone {
+    color: var(--neutral-secondary-day, #515961);
+    font-family: Open Sans;
+    font-size: 11.55px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    padding: .4rem 3%;
+    box-sizing: border-box;
+    width: 50%;
+
+    /* line-height: 17.33; */
+    word-wrap: 'break-word'
+}
+
+.byPhone2 {
+    font-weight: 600;
+    color: #141415;
+    border-bottom: 2px solid black;
+    font-family: Open Sans;
+    font-size: 11.55px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    padding: .4rem 3%;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.left form {
+    width: 50%;
+    gap: 40;
+    /* margin-bottom: 1rem; */
+}
+
+.left input {
+    width: 100%;
+    margin: .3rem auto;
+    padding: .4rem .8rem;
+    box-sizing: border-box;
+    outline: none;
+    border: 0.722px solid #DBDBDB;
+    border-radius: 5px;
+    align-self: stretch;
+}
+
+
+.eye {
+    position: relative;
+    margin-left: -25px;
+    height: 10%;
+    /* margin-top: .5rem; */
+    top: .2rem;
+    /* z-index: 2; */
+    color: #DBDBDB;
+}
+
+.eye:hover {
+    cursor: pointer;
+}
+
+.continue {
+    width: 100%;
+    gap: 5px;
+    margin: 1rem auto;
+    padding: .4rem .6rem;
+    font-size: 11.5px;
+    font-weight: 400;
+    border-radius: 5px;
+    background-color: #141415;
+    color: #fff;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.continue:hover {
+    background-color: #000000;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: -1rem; */
+}
+
+.by {
+    color: var(--neutral-secondary-day, #515961);
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 11.55px;
+    font-style: normal;
+    font-weight: 400;
+    margin: .4rem auto;
+}
+
+.and {
+    color: var(--neutral-secondary-day, #515961);
+    font-family: Open Sans;
+    font-size: 11.55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    margin: .1rem auto;
+}
+
+.left span {
+    color: var(--semantic-1-hyperlink-day, #0151FC);
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 11.55px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.sign {
+    margin-top: 3rem;
+    color: var(--neutral-secondary-day, #515961);
+    font-family: Open Sans;
+    font-size: 11.55px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+p {
+    cursor: default;
+}
+
+.alert {
+    color: #0d0d0e;
+    margin: 2px auto;
+    font-size: 9px;
+}
+
+.NA {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NA h1 {
+    margin: 0;
+}
+
+.registerContainer {
+    height: 30%;
+    width: 40%;
+    background-color: #01020f;
+    padding: 4%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    border: 2px solid #0a0909;
+    border-radius: 5px;
+    font-size: 70%;
+    box-shadow: inset 0 0 15px red;
+    color: #fff;
+}
+
+.close {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+
+}
