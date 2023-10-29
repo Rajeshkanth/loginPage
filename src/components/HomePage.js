@@ -3,21 +3,27 @@ import { FaRegEye } from "react-icons/fa";
 import SVG from "./svg/svg";
 import "./homepage.css";
 import { useEffect, useState } from "react";
-import Registered from "./Registered";
+import { AiOutlineClose } from "react-icons/ai";
 
 function HomePage() {
   const navigate = useNavigate();
   const [bymail, setByMail] = useState(true);
   const [isContinue, setIsContinue] = useState(false);
   const [mail, setMail] = useState("");
+  const [mobileNo, setMobileNo] = useState("");
   const [createPswd, setCreatePswd] = useState("");
   const [confirmPswd, setConfirmPswd] = useState("");
+  const [type, setType] = useState(true);
+  const [type2, setType2] = useState(true);
   const [SignUpDetails, setSignUpDetails] = useState([]);
 
   const handleInput = (input, e) => {
     switch (input) {
       case "mail":
         setMail(e.target.value);
+        break;
+      case "mobileNo":
+        setMobileNo(e.target.value);
         break;
       case "createPswd":
         setCreatePswd(e.target.value);
@@ -28,20 +34,35 @@ function HomePage() {
     }
   };
 
+  const handleType = (ty) => {
+    switch (ty) {
+      case "create":
+        setType(!type);
+        break;
+      case "confirm":
+        setType2(!type2);
+    }
+  };
+
   const continueBtn = (e) => {
-    e.preventDefault();
-    if (mail && createPswd && confirmPswd) {
+    // e.preventDefault();
+    if ((mail || mobileNo) && createPswd && confirmPswd) {
       let user = {
-        Mail: mail,
         CreatePswd: createPswd,
         ConfirmPswd: confirmPswd,
       };
+      if (bymail !== true) {
+        user.MobileNo = mobileNo;
+      } else {
+        user.Mail = mail;
+      }
+      setIsContinue(true);
       setSignUpDetails([...SignUpDetails, user]);
     }
     setMail("");
     setCreatePswd("");
     setConfirmPswd("");
-    setIsContinue(true);
+    setMobileNo("");
     console.log(SignUpDetails);
   };
 
@@ -96,11 +117,13 @@ function HomePage() {
                 <input
                   type="number"
                   placeholder="Enter mobile number"
+                  value={mobileNo}
+                  onChange={(e) => handleInput("mobileNo", e)}
                   required
                 />
               )}
               <input
-                type="password"
+                type={type ? "password" : "text"}
                 minLength={6}
                 maxLength={10}
                 placeholder="Create password"
@@ -108,12 +131,12 @@ function HomePage() {
                 onChange={(e) => handleInput("createPswd", e)}
                 required
               />
-              <FaRegEye className="eye" />
+              <FaRegEye className="eye" onClick={() => handleType("create")} />
               {/* {createPswd.length < 6 && createPswd !== "" ? (
                 <h6 className="alert">minimum length 6 </h6>
               ) : null} */}
               <input
-                type="password"
+                type={type2 ? "password" : "text"}
                 minLength={6}
                 maxLength={10}
                 placeholder="Confirm password"
@@ -121,7 +144,7 @@ function HomePage() {
                 onChange={(e) => handleInput("confirmPswd", e)}
                 required
               />
-              <FaRegEye className="eye" />
+              <FaRegEye className="eye" onClick={() => handleType("confirm")} />
               {createPswd != confirmPswd ? (
                 <h6 className="alert">password doesn't match</h6>
               ) : null}
@@ -138,7 +161,18 @@ function HomePage() {
             <p className="sign" onClick={signup}>
               old Moonsooner? <span>Sign in</span>
             </p>
-            {isContinue ? <Registered /> : null}
+            {isContinue ? (
+              <div className="registerContainer">
+                <div className="NA">
+                  <h1>New Account</h1>
+                  <AiOutlineClose
+                    className="close"
+                    onClick={() => setIsContinue(!isContinue)}
+                  />
+                </div>
+                <h1>Successfully Registered !</h1>
+              </div>
+            ) : null}
           </div>
         </div>
         <div className="right"></div>
