@@ -3,7 +3,7 @@ import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import SVG from "./svg/svg";
 import "./homepage.css";
-import { createContext, useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { myContext } from "../App";
 
