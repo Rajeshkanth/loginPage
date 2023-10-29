@@ -1,12 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { FaRegEye } from "react-icons/fa";
+import { FaRegEyeSlash } from "react-icons/fa";
 import SVG from "./svg/svg";
 import "./homepage.css";
-import { useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { myContext } from "../App";
 
 function HomePage() {
   const navigate = useNavigate();
+  const userContext = useContext(myContext);
+
   const [bymail, setByMail] = useState(true);
   const [isContinue, setIsContinue] = useState(false);
   const [mail, setMail] = useState("");
@@ -15,7 +19,6 @@ function HomePage() {
   const [confirmPswd, setConfirmPswd] = useState("");
   const [type, setType] = useState(true);
   const [type2, setType2] = useState(true);
-  const [SignUpDetails, setSignUpDetails] = useState([]);
 
   const handleInput = (input, e) => {
     switch (input) {
@@ -57,13 +60,13 @@ function HomePage() {
         user.Mail = mail;
       }
       setIsContinue(true);
-      setSignUpDetails([...SignUpDetails, user]);
+      userContext.setSignUpDetails([...userContext.SignUpDetails, user]);
     }
     setMail("");
     setCreatePswd("");
     setConfirmPswd("");
     setMobileNo("");
-    console.log(SignUpDetails);
+    console.log(userContext.SignUpDetails);
   };
 
   const signup = () => {
@@ -77,9 +80,6 @@ function HomePage() {
     setByMail(false);
   };
 
-  useEffect(() => {
-    console.log(SignUpDetails);
-  }, [SignUpDetails]);
   return (
     <>
       <div className="create-account-container">
@@ -131,7 +131,17 @@ function HomePage() {
                 onChange={(e) => handleInput("createPswd", e)}
                 required
               />
-              <FaRegEye className="eye" onClick={() => handleType("create")} />
+              {type ? (
+                <FaRegEyeSlash
+                  className="eye"
+                  onClick={() => handleType("create")}
+                />
+              ) : (
+                <FaRegEye
+                  className="eye"
+                  onClick={() => handleType("create")}
+                />
+              )}
               {/* {createPswd.length < 6 && createPswd !== "" ? (
                 <h6 className="alert">minimum length 6 </h6>
               ) : null} */}
@@ -144,8 +154,18 @@ function HomePage() {
                 onChange={(e) => handleInput("confirmPswd", e)}
                 required
               />
-              <FaRegEye className="eye" onClick={() => handleType("confirm")} />
-              {createPswd != confirmPswd ? (
+              {type2 ? (
+                <FaRegEyeSlash
+                  className="eye"
+                  onClick={() => handleType("confirm")}
+                />
+              ) : (
+                <FaRegEye
+                  className="eye"
+                  onClick={() => handleType("confirm")}
+                />
+              )}
+              {createPswd !== confirmPswd ? (
                 <h6 className="alert">password doesn't match</h6>
               ) : null}
               <button className="continue" onClick={(e) => continueBtn(e)}>
