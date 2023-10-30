@@ -34,6 +34,8 @@ function HomePage() {
       case "confirmPswd":
         setConfirmPswd(e.target.value);
         break;
+      default:
+        break;
     }
   };
 
@@ -44,6 +46,8 @@ function HomePage() {
         break;
       case "confirm":
         setType2(!type2);
+      default:
+        break;
     }
   };
 
