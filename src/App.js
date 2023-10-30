@@ -12,9 +12,7 @@ function App() {
     console.log(SignUpDetails);
   }, [SignUpDetails]);
   return (
-    <myContext.Provider
-      value={{ area: "velachery", SignUpDetails, setSignUpDetails }}
-    >
+    <myContext.Provider value={{ SignUpDetails, setSignUpDetails }}>
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
