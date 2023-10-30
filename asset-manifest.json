@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/loginPage/static/css/main.1224ce20.css",
-    "main.js": "/loginPage/static/js/main.a047c7bb.js",
+    "main.js": "/loginPage/static/js/main.52406a84.js",
     "static/media/digital-art-moon-wallpaper.jpg": "/loginPage/static/media/digital-art-moon-wallpaper.dc8d0632d6318b0f91a9.jpg",
     "index.html": "/loginPage/index.html",
     "main.1224ce20.css.map": "/loginPage/static/css/main.1224ce20.css.map",
-    "main.a047c7bb.js.map": "/loginPage/static/js/main.a047c7bb.js.map"
+    "main.52406a84.js.map": "/loginPage/static/js/main.52406a84.js.map"
   },
   "entrypoints": [
     "static/css/main.1224ce20.css",
-    "static/js/main.a047c7bb.js"
+    "static/js/main.52406a84.js"
   ]
 }
