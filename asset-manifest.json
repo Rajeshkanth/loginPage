@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/loginPage/static/css/main.1224ce20.css",
-    "main.js": "/loginPage/static/js/main.8c97cf3f.js",
+    "main.css": "/loginPage/static/css/main.0ea2864e.css",
+    "main.js": "/loginPage/static/js/main.7f3fb703.js",
     "static/media/digital-art-moon-wallpaper.jpg": "/loginPage/static/media/digital-art-moon-wallpaper.dc8d0632d6318b0f91a9.jpg",
+    "static/media/pexels-eberhard-grossgasteiger-691668.jpg": "/loginPage/static/media/pexels-eberhard-grossgasteiger-691668.85fa304c654146a61e4b.jpg",
     "index.html": "/loginPage/index.html",
-    "main.1224ce20.css.map": "/loginPage/static/css/main.1224ce20.css.map",
-    "main.8c97cf3f.js.map": "/loginPage/static/js/main.8c97cf3f.js.map"
+    "main.0ea2864e.css.map": "/loginPage/static/css/main.0ea2864e.css.map",
+    "main.7f3fb703.js.map": "/loginPage/static/js/main.7f3fb703.js.map"
   },
   "entrypoints": [
-    "static/css/main.1224ce20.css",
-    "static/js/main.8c97cf3f.js"
+    "static/css/main.0ea2864e.css",
+    "static/js/main.7f3fb703.js"
   ]
 }
