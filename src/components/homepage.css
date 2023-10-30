@@ -25,7 +25,6 @@ p {
 
 .right {
     width: 50%;
-
     box-sizing: border-box;
     background-image: url("./svg/digital-art-moon-wallpaper.jpg");
     background-size: cover;
@@ -44,7 +43,6 @@ p {
     font-size: 8.66px;
     font-family: 'Nunito';
     font-weight: 800;
-    /* line-height: 11.55; */
     letter-spacing: 2.51;
     word-wrap: 'break-word'
 }
@@ -102,8 +100,6 @@ p {
     padding: .4rem 3%;
     box-sizing: border-box;
     width: 50%;
-
-    /* line-height: 17.33; */
     word-wrap: 'break-word'
 }
 
@@ -124,7 +120,6 @@ p {
 .left form {
     width: 50%;
     gap: 40;
-    /* margin-bottom: 1rem; */
 }
 
 .left input {
@@ -143,9 +138,7 @@ p {
     position: relative;
     margin-left: -25px;
     height: 10%;
-    /* margin-top: .5rem; */
     top: .2rem;
-    /* z-index: 2; */
     color: #DBDBDB;
 }
 
@@ -177,7 +170,6 @@ p {
     align-items: center;
     display: flex;
     flex-direction: column;
-    /* margin-top: -1rem; */
 }
 
 .by {
