@@ -52,7 +52,7 @@ function HomePage() {
   };
 
   const continueBtn = (e) => {
-    if (mail.includes("@")) {
+    if (mail.includes("@") || mobileNo) {
       if ((mail || mobileNo) && createPswd && confirmPswd) {
         let user = {
           CreatePswd: createPswd,
