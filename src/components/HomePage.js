@@ -3,7 +3,7 @@ import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import SVG from "./svg/svg";
 import "./homepage.css";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { myContext } from "../App";
 
@@ -52,25 +52,26 @@ function HomePage() {
   };
 
   const continueBtn = (e) => {
-    // e.preventDefault();
-    if ((mail || mobileNo) && createPswd && confirmPswd) {
-      let user = {
-        CreatePswd: createPswd,
-        ConfirmPswd: confirmPswd,
-      };
-      if (bymail !== true) {
-        user.MobileNo = mobileNo;
-      } else {
-        user.Mail = mail;
+    if (mail.includes("@")) {
+      if ((mail || mobileNo) && createPswd && confirmPswd) {
+        let user = {
+          CreatePswd: createPswd,
+          ConfirmPswd: confirmPswd,
+        };
+        if (bymail !== true) {
+          user.MobileNo = mobileNo;
+        } else {
+          user.Mail = mail;
+        }
+        setIsContinue(true);
+        userContext.setSignUpDetails([...userContext.SignUpDetails, user]);
       }
-      setIsContinue(true);
-      userContext.setSignUpDetails([...userContext.SignUpDetails, user]);
+      setMail("");
+      setCreatePswd("");
+      setConfirmPswd("");
+      setMobileNo("");
+      console.log(userContext.SignUpDetails);
     }
-    setMail("");
-    setCreatePswd("");
-    setConfirmPswd("");
-    setMobileNo("");
-    console.log(userContext.SignUpDetails);
   };
 
   const signup = () => {
@@ -84,6 +85,8 @@ function HomePage() {
     setByMail(false);
   };
 
+  useEffect(() => {}, [userContext.SignUpDetails]);
+
   return (
     <>
       <div className="create-account-container">
@@ -92,6 +95,18 @@ function HomePage() {
             <SVG />
             <p className="moonsoon">MOONSOON</p>
           </div>
+          {isContinue ? (
+            <div className="registerContainer">
+              <div className="NA">
+                <h1>New Account</h1>
+                <AiOutlineClose
+                  className="close"
+                  onClick={() => setIsContinue(!isContinue)}
+                />
+              </div>
+              <h1>Successfully Registered !</h1>
+            </div>
+          ) : null}
           <div className="container">
             <h1 className="ca">Create Account</h1>
             <div className="ca-container">
@@ -185,18 +200,6 @@ function HomePage() {
             <p className="sign" onClick={signup}>
               old Moonsooner? <span>Sign in</span>
             </p>
-            {isContinue ? (
-              <div className="registerContainer">
-                <div className="NA">
-                  <h1>New Account</h1>
-                  <AiOutlineClose
-                    className="close"
-                    onClick={() => setIsContinue(!isContinue)}
-                  />
-                </div>
-                <h1>Successfully Registered !</h1>
-              </div>
-            ) : null}
           </div>
         </div>
         <div className="right"></div>

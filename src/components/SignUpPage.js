@@ -28,7 +28,7 @@ function SignInPage() {
     for (let i = 0; i < user.SignUpDetails.length; i++) {
       if (
         (user.SignUpDetails[i].Mail === mobile ||
-          user.SignUpDetails[i].Mobile === mobile) &&
+          user.SignUpDetails[i].MobileNo === mobile) &&
         user.SignUpDetails[i].ConfirmPswd === pswd
       ) {
         navigate("/dashboard");
