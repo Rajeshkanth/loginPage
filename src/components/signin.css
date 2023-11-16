@@ -59,11 +59,18 @@
     font-size: 13.55px;
     font-style: normal;
     font-weight: 600;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     margin-top: 2rem;
     /* line-height: 1; */
     cursor: pointer;
 }
+
+.signIn .sign {
+    color: rgb(234, 234, 242);
+
+}
+
+
 
 .signEye {
     color: #080808;

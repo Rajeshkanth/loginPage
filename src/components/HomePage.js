@@ -75,7 +75,7 @@ function HomePage() {
   };
 
   const signup = () => {
-    navigate("/signup");
+    navigate("/signin");
   };
 
   const handlemail = () => {

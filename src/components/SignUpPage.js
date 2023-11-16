@@ -12,6 +12,9 @@ function SignInPage() {
   const handleType = () => {
     setType(!type);
   };
+  const signup = () => {
+    navigate("/");
+  };
 
   const [mobile, setMobile] = useState("");
   const [pswd, setPswd] = useState("");
@@ -58,7 +61,15 @@ function SignInPage() {
               <FaRegEye className="signEye" onClick={handleType} />
             )}
             <button onClick={(e) => dashboard(e)}>Log in</button>
-            <span>forgot password?</span>
+            <span>
+              forgot password? <br />{" "}
+              <p>
+                don't have an account? ,{" "}
+                <span onClick={signup} className="sign">
+                  sign up
+                </span>
+              </p>
+            </span>
           </div>
         </form>
       </div>

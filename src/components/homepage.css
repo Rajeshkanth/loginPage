@@ -14,7 +14,6 @@ p {
 
 .left {
     background-color: #fff;
-
     width: 50%;
     box-sizing: border-box;
     display: flex;
@@ -257,4 +256,47 @@ p {
     font-weight: 600;
     font-size: 1rem;
 
+}
+
+@media all and (max-width:600px) {
+    .create-account-container {
+        display: block;
+        height: 100vh;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 90%;
+        margin: 4rem auto 0 auto;
+
+    }
+
+    .left form {
+        width: 70%;
+    }
+
+    .svg {
+        height: 5.8vh;
+    }
+
+
+
+    .sign-container form {
+        position: absolute;
+        top: 15vh;
+        left: 7vw;
+        width: 85% !important;
+    }
+
+    .sign-container input {
+        width: 85% !important;
+        background-color: rgb(240, 233, 233) !important;
+    }
+
+    .signIn {
+        width: 100% !important;
+    }
 }
