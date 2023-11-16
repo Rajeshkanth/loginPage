@@ -64,7 +64,7 @@ function SignInPage() {
             <span>
               forgot password? <br />{" "}
               <p>
-                don't have an account? ,{" "}
+                don't have an account?{" "}
                 <span onClick={signup} className="sign">
                   sign up
                 </span>
